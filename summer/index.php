@@ -1,3 +1,8 @@
+<?php 
+require_once('../config.php');  
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +20,7 @@
 
 </head>
 
-<body>
+<body oncontext="return false">
   <!-- This is navber part start -->
   <nav class="px-10 pb-5 bg-[#F9F6E2]">
     <div class="navbar ">
@@ -48,7 +53,7 @@
               </a>
             </li>
             <li><a>Settings</a></li>
-            <li><a>Logout</a></li>
+            <li><a href="../index.php">Logout</a></li>
           </ul>
         </div>
       </div>

@@ -6,8 +6,8 @@ if (!empty($_POST)) {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $username = $_POST['username'];
-    $password = $_POST['password'];
-    $repassword = $_POST['repassword'];
+    $password = md5($_POST['password']);
+    $repassword = md5($_POST['repassword']);
 
     $insert = "INSERT INTO regi (name, user_email, mobile, username, password) 
     VALUES ('$name', '$email', '$phone', '$username', '$password')";
@@ -20,6 +20,7 @@ if(!empty($name)) {
                     if ($password == $repassword) {
         if (mysqli_query($con, $insert)) {  
             echo "Registration successful";
+            header('Location:index.php');
         } else {
             echo "Error"; 
         }
@@ -39,12 +40,12 @@ if(!empty($name)) {
     }else{
     echo "Please Enter Your Name";
     }
-    echo $name, "<br/>";
-    echo $email, "<br/>";
-    echo $phone, "<br/>";
-    echo $username, "<br/>";
-    echo $password, "<br/>";
-    echo $repassword, "<br/>";
+    // echo $name, "<br/>";
+    // echo $email, "<br/>";
+    // echo $phone, "<br/>";
+    // echo $username, "<br/>";
+    // echo $password, "<br/>";
+    // echo $repassword, "<br/>";
 }
 ?>
 

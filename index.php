@@ -3,6 +3,8 @@
 require_once ('./config.php');
 
 
+
+
 ?>
 
 
@@ -16,7 +18,26 @@ require_once ('./config.php');
 <body>
 	<section class="login-container">
 		<h1>Login Form</h1>
-		<form action="" method="">
+
+		<?php 
+		if(!empty($_POST)){
+			$username = $_POST['username'];
+            $password = md5($_POST['password']);
+			$sel = "SELECT * FROM regi WHERE username='$username' AND password='$password'";
+			$result = mysqli_query($con,$sel);
+			$row = mysqli_fetch_assoc($result);
+			if ($row) {
+				header('location:./summer/index.php');
+			} else {
+				echo"Username or password didnot match";
+			}
+			
+		}
+		echo"echo ";
+		
+		?>
+
+		<form action="" method="post">
 			<label for="username">Username:</label>
 			<input type="text" id="username" name="username" placeholder="Enter your username">
 
