@@ -1,4 +1,5 @@
 <?php 
+
 $db_name='login';
 $db_user='root';
 $db_pass='';
