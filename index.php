@@ -51,7 +51,7 @@ require_once ('./config.php');
 		<div class="">
 			<button type="submit" name="login">Login</button>
 			<button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" type="submit" name=""><a href="./signup.php">Signup</a></button>
-			<h2><a href="Forgetpass.php">Forget Password ?</a></h2>
+			<h2><a href="Forgetpass.php?p=<?$data['user_id']; ?>">Forget Password ?</a></h2>
 		</div>
 		</form>
 	</section>
