@@ -1,6 +1,7 @@
-<?php 
+<?php  session_start();
 require_once('../config.php'); 
 require_once('./Functions/functions.php'); 
+needLoged();
 get_header();
 ?>
 

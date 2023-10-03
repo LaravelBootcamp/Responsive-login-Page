@@ -1,5 +1,6 @@
-<?php 
+<?php  
 require_once ('summer/Functions/functions.php');
+
 $db_name='login';
 $db_user='root';
 $db_pass='';
